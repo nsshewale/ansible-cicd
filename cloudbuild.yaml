@@ -14,20 +14,20 @@ steps:
     entrypoint: 'npm'
     args: ['run', 'build']
   
-  - name: 'gcr.io/cloud-builders/gcloud'
-    entrypoint: 'bash'
-    args:
-      - '-c'
-      - | 
-        ls -lha
-        cd build
-        pwd
-        ls -lha
+ # - name: 'gcr.io/cloud-builders/gcloud'
+  #  entrypoint: 'bash'
+   # args:
+    #  - '-c'
+     # - | 
+      #  ls -lha
+       3 cd build
+        #pwd
+        #ls -lha
 
    # Step 2: Install Ansible
-  - name: 'python:3.8'
-    entrypoint: 'pip'
-    args: ['install', 'ansible']
+ # - name: 'python:3.8'
+  #  entrypoint: 'pip'
+   # args: ['install', 'ansible']
  
    # Step 3: Run Ansible playbook to transfer build files to GCP VM
   - name: 'ansible/ubuntu14.04-ansible' 
