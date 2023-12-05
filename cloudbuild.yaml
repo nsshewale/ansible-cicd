@@ -30,7 +30,7 @@ steps:
     args: ['install', 'ansible']
 
    # Step 3: Run Ansible playbook to transfer build files to GCP VM
-  - name: 'gcr.io/cloud-builders/gcloud' 
+  - name: 'docker pull jfxs/ansible' 
     args:
       - 'ansible-playbook'
       - '-i'
