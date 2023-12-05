@@ -24,5 +24,7 @@ steps:
         pwd
         ls -lha
 
-  - name: 'gcr.io/cloud-builders/ansible'
-     args: ['--version']     
+   # Step 2: Install Ansible
+  - name: 'gcr.io/cloud-builders/pip'
+    args: ['install', 'ansible']
+    
