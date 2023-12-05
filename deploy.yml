@@ -1,6 +1,4 @@
 # deploy.yml
-
----
 - name: Deploy React App on GCP VM
   hosts: instance-1
   gather_facts: false
