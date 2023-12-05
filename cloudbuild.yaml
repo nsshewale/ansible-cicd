@@ -34,6 +34,6 @@ steps:
     args:
       - 'ansible-playbook'
       - '-i'
-      - '/inventory.ini'
-      - '/deploy.yml'    
+      - '/workspace/inventory.ini'
+      - '/workspace/deploy.yml'    
       
