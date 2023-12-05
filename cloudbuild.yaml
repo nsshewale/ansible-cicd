@@ -33,8 +33,8 @@ steps:
   - name: 'ansible/ubuntu14.04-ansible' 
     entrypoint: bash
     args: 
-      - 'ansible-playbook'
-      - '-i'
-      - '/workspace/inventory.ini'
-      - '/workspace/deploy.yml'    
+      - ansible-playbook
+      - -i
+      - /workspace/inventory.ini
+      - /workspace/deploy.yml    
       
