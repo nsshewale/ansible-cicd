@@ -8,5 +8,5 @@
   tasks:
     - name: Copy React app files
       copy:
-        src: /workspace
-        dest: /var/www/html
+        src: '/workspace/build'
+        dest: '/var/www/html'
