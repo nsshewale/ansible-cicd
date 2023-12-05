@@ -1,3 +1,8 @@
+substitutions:
+   PROJECT_ID: affable-beaker-407007
+
+options:
+  dynamic_substitutions: true
 steps:
   # Step 1: Use an official Node.js image for installing dependencies
   - name: 'node:14'
@@ -18,3 +23,7 @@ steps:
         cd build
         pwd
         ls -lha
+
+   # Simple sanity check: check that ansible-playbook has not errors
+   - name: 'gcr.io/$PROJECT_ID/ansible'
+     args: ['--version']     
