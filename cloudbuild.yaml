@@ -30,7 +30,7 @@ steps:
     args: ['install', 'ansible']
  
    # Step 3: Run Ansible playbook to transfer build files to GCP VM
-  - name: 'ansible/ansible' 
+  - name: 'hub.docker.com/r/ansible/ubuntu14.04-ansible' 
     entrypoint: /bin/sh
     args:
       - '-c'
