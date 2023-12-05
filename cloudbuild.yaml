@@ -15,3 +15,6 @@ steps:
       - '-c'
       - | 
         ls -lha
+        cd build
+        pwd
+        ls -lha
