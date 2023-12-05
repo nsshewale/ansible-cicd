@@ -25,5 +25,5 @@ steps:
         ls -lha
 
    # Simple sanity check: check that ansible-playbook has not errors
-   - name: 'gcr.io/$PROJECT_ID/ansible'
+   - name: 'gcr.io/cloud-builders/ansible'
      args: ['--version']     
