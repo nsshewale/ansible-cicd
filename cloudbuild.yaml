@@ -25,6 +25,6 @@ steps:
         ls -lha
 
    # Step 2: Install Ansible
-  - name: 'gcr.io/cloud-builders/pip'
+  - name: 'gcr.io/cloud-builders/python'
+    entrypoint: 'pip'
     args: ['install', 'ansible']
-    
