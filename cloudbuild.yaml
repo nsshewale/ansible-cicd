@@ -15,7 +15,7 @@ steps:
     args: ['run', 'build']
   
  # - name: 'gcr.io/cloud-builders/gcloud'
-  #  entrypoint: 'bin/bash
+  #  entrypoint: 'bin/bash'
    # args:
     #  - '-c'
      # - | 
@@ -31,9 +31,9 @@ steps:
  
    # Step 3: Run Ansible playbook to transfer build files to GCP VM
   - name: 'ansible/ubuntu14.04-ansible' 
-    entrypoint: bash
+    entrypoint: 'bin/bash'
     args: 
-      - ansible-playbook
+      - 'ansible-playbook'
       - '-i'
       - '/workspace/inventory.ini'
       - '/workspace/deploy.yml'    
