@@ -30,7 +30,7 @@ steps:
     args: ['install', 'ansible']
 
    # Step 3: Run Ansible playbook to transfer build files to GCP VM
-  - name: 'registry.gitlab.com/pipeline-components/ansible-lint:latest' 
+  - name: 'registry.gitlab.com/pipeline-components/ansible:latest' 
     args:
       - 'ansible-playbook'
       - '-i'
