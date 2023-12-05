@@ -33,7 +33,6 @@ steps:
   - name: 'ansible/ubuntu14.04-ansible' 
     # entrypoint: /bin/sh
     args:                        
-      - 'deploy.yml'
       - '-i'
       - '/workspace/inventory.ini'
       - '/workspace/deploy.yml'    
