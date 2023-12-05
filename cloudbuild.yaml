@@ -20,7 +20,7 @@ steps:
     #  - '-c'
      # - | 
       #  ls -lha
-       3 cd build
+       # cd build
         #pwd
         #ls -lha
 
