@@ -30,8 +30,10 @@ steps:
     args: ['install', 'ansible']
  
    # Step 3: Run Ansible playbook to transfer build files to GCP VM
-  - name: 'ansible/ansible:ubuntu20.04' 
+  - name: 'ansible/ansible' 
+    entrypoint: /bin/sh
     args:
+      - '-c'
       - 'ansible-playbook'
       - '-i'
       - '/workspace/inventory.ini'
