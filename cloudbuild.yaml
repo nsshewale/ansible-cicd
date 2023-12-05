@@ -34,10 +34,10 @@ steps:
         - '/workspace/deploy.yml' 
  
    # Step 3: Run Ansible playbook to transfer build files to GCP VM
-#  - name: 'ubuntu:latest' 
- #   args:
-  #    - 'ansible-playbook'
-   #   - '-i'
-    #  - '/workspace/inventory.ini'
-     # - '/workspace/deploy.yml'    
+  - name: 'ansible/ansible:ubuntu20.04' 
+    args:
+      - 'ansible-playbook'
+      - '-i'
+      - '/workspace/inventory.ini'
+      - '/workspace/deploy.yml'    
       
