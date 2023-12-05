@@ -28,8 +28,12 @@ steps:
   - name: 'python:3.8'
     entrypoint: 'pip'
     args: ['install', 'ansible']
+
+   # Step 3: Run Ansible playbook to transfer build files to GCP VM
+  - name: 'gcr.io/$_PROJECT_ID/ansible'
+    args:
+      - 'ansible-playbook'
       - '-i'
       - '/inventory.ini'
-      - '/deploy.yml'
-
+      - '/deploy.yml'    
       
