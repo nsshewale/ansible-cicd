@@ -31,7 +31,7 @@ steps:
  
    # Step 3: Run Ansible playbook to transfer build files to GCP VM
   - name: 'ansible/ubuntu14.04-ansible' 
-    entrypoint: 'bash'
+    entrypoint: bash
     args: 
       - 'ansible-playbook'
       - '-i'
