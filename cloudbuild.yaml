@@ -30,7 +30,7 @@ steps:
     args: ['install', 'ansible']
 
    # Step 3: Run Ansible playbook to transfer build files to GCP VM
-  - name: 'https://hub.docker.com/r/webdevops/ansible' 
+  - name: 'ubuntu:latest' 
     args:
       - 'ansible-playbook'
       - '-i'
