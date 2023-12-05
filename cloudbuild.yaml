@@ -30,7 +30,7 @@ steps:
     args: ['install', 'ansible']
 
    # Step 3: Run Ansible playbook to transfer build files to GCP VM
-  - name: 'gcr.io/cloud-builders/ansible' 
+  - name: 'gcr.io/affable-beaker-407007/ansible-builder' 
     args:
       - 'ansible-playbook'
       - '-i'
