@@ -6,6 +6,8 @@
   gather_facts: false
   become: yes
   tasks:
+    - name: Ping my hosts
+      ansible.builtin.ping:
     - name: Copy React app files
       copy:
         src: '/workspace/build'
