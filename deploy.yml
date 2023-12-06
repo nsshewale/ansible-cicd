@@ -1,15 +1,12 @@
 # deploy.yml
-- name: SSH into GCP VM using Ansible playbook
-  hosts: all
-  gather_facts: no
-- name: Authenticate with GCP
-    gcp_compute_auth:
-      credentials_file: '/workspace/credentials.json'
-  
-  tasks:
-  - name: SSH into Compute Engine VM
-    ssh:
-      user: 'niteshshewale6'
-      host: 34.93.111.35
-      key_file: '/workspace/private_key'
 
+---
+- name: Deploy React App on GCP VM
+  hosts: instance-1
+  gather_facts: false
+  become: yes
+  tasks:
+    - name: Copy React app files
+      copy:
+        src: '/workspace/build'
+        dest: '/var/www/html'
