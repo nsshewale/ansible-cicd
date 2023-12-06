@@ -35,7 +35,7 @@ steps:
       - '-c'
       - |
         # Create SSH configuration dynamically
-        echo -e "Host gcp-vm\n  HostName 34.93.111.35\n  User your-ssh-user\n  IdentityFile /workspace/private_key" > ~/.ssh/config
+        echo -e "Host gcp-vm\n  HostName 34.93.111.35\n  User niteshshewale6\n  IdentityFile /workspace/private_key" > ~/.ssh/config
 
         # Run Ansible playbook
         ansible-playbook -i "gcp-vm," playbook.yml   
