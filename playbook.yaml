@@ -7,10 +7,10 @@
   become: yes
   tasks:
     - name: Print message
-      ansible.builtin.debug:
+      ansible.builtin.command:
        msg: Hello world
     
-    - name: Copy React app files
-      copy:
-        src: '/workspace/build'
-        dest: '/var/www/html'
+    #- name: Copy React app files
+     # copy:
+      #  src: '/workspace/build'
+       # dest: '/var/www/html'
