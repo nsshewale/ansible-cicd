@@ -36,5 +36,5 @@ steps:
       - 'ansible-playbook'
       - '-i'
       - '/workspace/inventory.ini'
-      - '/workspace/deploy.yml'    
+      - '/workspace/deploy.yaml'    
       
