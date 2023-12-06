@@ -5,7 +5,7 @@
   tasks:
   - name: Authenticate with GCP
     gcp_compute_auth:
-      credentials_file: /path/to/credentials.json
+      credentials_file: /workspace/credentials.json
   - name: SSH into Compute Engine VM
     ssh:
       user: niteshshewale6
