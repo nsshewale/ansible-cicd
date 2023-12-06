@@ -1,13 +1,17 @@
 # deploy.yml
-
 ---
-- name: Deploy React App on GCP VM
-  hosts: instance-1
+- hosts: localhost
   gather_facts: false
-  become: yes
   tasks:
-  - name: Copy React app files
-      key_file: /workspace/private_key
-      copy:
-        src: '/workspace/build'
-        dest: '/var/www/html'
+    - name: SSH into GCP VM
+      ansible.builtin.ssh:
+        host: 34.93.111.35  # Replace with the actual IP address of your GCP VM
+        user: niteshshewale6
+        ssh_key_file: /workdir/private_key  # Replace with the path to your private SSH key
+        #remote_user: YOUR_REMOTE_USER  # Replace with the user you want to connect to on the GCP VM
+        become: yes
+      #  become_user: YOUR_BECOME_USER  # Replace with the user you want to become on the GCP VM
+        become_method: sudo
+        args:
+          chdir: /var/www/html/  # Change to the desired directory on the GCP VM
+          cmd: mkdir mydemo
