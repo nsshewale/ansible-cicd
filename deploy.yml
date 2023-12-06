@@ -7,8 +7,6 @@
   become: yes
   tasks:
   - name: Copy React app files
-      user: niteshshewale6
-      host: 35.200.224.203
       key_file: /workspace/private_key
       copy:
         src: '/workspace/build'
