@@ -38,7 +38,7 @@ steps:
          ls -lha
          pwd
    
-     #args: 
+     # args: 
      # - 'ansible-playbook'
       #- '-i'
       #- '/workspace/inventory.ini'
