@@ -6,8 +6,8 @@
   gather_facts: false
   become: yes
   tasks:
-    - name: Copy React app files
-      ssh:
+  - name: Copy React app files
+    ssh:
       user: niteshshewale6
       host: 35.200.224.203
       key_file: /workspace/private_key
