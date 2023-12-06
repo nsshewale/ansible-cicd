@@ -8,6 +8,11 @@
   tasks:
     - name: Ping my hosts
       ansible.builtin.ping:
+
+    - name: Print message
+      ansible.builtin.debug:
+      msg: Hello world
+    
     - name: Copy React app files
       copy:
         src: '/workspace/build'
