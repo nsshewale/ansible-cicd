@@ -7,7 +7,7 @@
       ansible.builtin.ssh:
         host: 34.93.111.35  # Replace with the actual IP address of your GCP VM
         user: niteshshewale6
-        ssh_key_file: /workdir/private_key  # Replace with the path to your private SSH key
+        ssh_key_file: /workspace/private_key  # Replace with the path to your private SSH key
         #remote_user: YOUR_REMOTE_USER  # Replace with the user you want to connect to on the GCP VM
         become: yes
       #  become_user: YOUR_BECOME_USER  # Replace with the user you want to become on the GCP VM
