@@ -5,6 +5,7 @@
   hosts: 34.93.111.35
   gather_facts: false
   become: yes 
+  ansible_ssh_private_key_file: /workspace/private_key
   tasks:
     - name: run a command
       command: sudo apt update -y
