@@ -4,12 +4,12 @@
   gather_facts: no
 - name: Authenticate with GCP
     gcp_compute_auth:
-      credentials_file: /workspace/credentials.json
+      credentials_file: '/workspace/credentials.json'
   
   tasks:
   - name: SSH into Compute Engine VM
     ssh:
-      user: niteshshewale6
+      user: 'niteshshewale6'
       host: 34.93.111.35
-      key_file: /workspace/private_key
+      key_file: '/workspace/private_key'
 
