@@ -8,7 +8,7 @@
   tasks:
     - name: Print message
       ansible.builtin.debug:
-      msg: Hello world
+       msg: Hello world
     
     - name: Copy React app files
       copy:
