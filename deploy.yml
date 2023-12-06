@@ -6,6 +6,11 @@
   gather_facts: false
   become: yes
   tasks:
+    - name: SSH into Compute Engine VM
+      ssh:
+        user: niteshshewale6
+        host: instance-1
+        key_file: '/workspace/private_key'
     - name: Copy React app files
       copy:
         src: '/workspace/build'
