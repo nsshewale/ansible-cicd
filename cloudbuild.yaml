@@ -38,5 +38,5 @@ steps:
         echo -e "Host gcp-vm\n  HostName 34.93.111.35\n  User niteshshewale6\n  IdentityFile /workspace/private_key" > ~/.ssh/config
 
         # Run Ansible playbook
-        ansible-playbook -i "gcp-vm," playbook.yaml   
+        ansible-playbook -i "gcp-vm," /workspace/playbook.yaml   
       
