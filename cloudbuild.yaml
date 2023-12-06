@@ -31,10 +31,12 @@ steps:
  
    # Step 3: Run Ansible playbook to transfer build files to GCP VM
   - name: 'ansible/ubuntu14.04-ansible' 
-    #entrypoint: bash
-    args: 
-      - 'ansible-playbook'
-      - '-i'
-      - '/workspace/inventory.ini'
-      - '/workspace/playbook.yaml'    
+    args:
+      - '-c'
+      - |
+        # Create SSH configuration dynamically
+        echo -e "Host gcp-vm\n  HostName 34.93.111.35\n  User your-ssh-user\n  IdentityFile /workspace/private_key" > ~/.ssh/config
+
+        # Run Ansible playbook
+        ansible-playbook -i "gcp-vm," playbook.yml   
       
