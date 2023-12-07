@@ -3,8 +3,9 @@
 ---
 - name: Deploy React App on GCP VM
   hosts: instance-1
-  gather_facts: false
+  gather_facts: yes
   become: yes 
+  connection: ssh
   tasks:
     - name: deploy to server
       command: sudo apt update -y
