@@ -17,16 +17,10 @@ steps:
    # Step 3: Run Ansible playbook to transfer build files to GCP VM
   - name: 'ansible/ubuntu14.04-ansible' 
     entrypoint: 'bash'
-    args:
-       - '-c'
-       - | 
-         ls -lha
-         pwd
-   
-      # args: 
-     # - 'ansible-playbook'
-      #- '-i'
-      #- '/workspace/inventory.ini'
-      #- '/workspace/playbook.yaml'    
+    args: 
+      - 'ansible-playbook'
+      - '-i'
+      - '/workspace/inventory.ini'
+      - '/workspace/playbook.yaml'    
 
       
