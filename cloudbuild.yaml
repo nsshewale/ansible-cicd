@@ -18,6 +18,7 @@ steps:
   - name: 'ansible/ubuntu14.04-ansible' 
    # entrypoint: 'bin/bash'
     args: 
+      - '-c'
       - 'sudo apt-get install sshpass -y'
       - 'ansible-playbook'
       - '-i'
