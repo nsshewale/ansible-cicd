@@ -7,6 +7,7 @@
   become: yes 
   tasks:
     - name: deploy to server
-      copy:
-        src: '/workspace/build'
-        dest: '/var/www/html'
+      command: sudo apt update -y
+      #copy:
+       # src: '/workspace/build'
+       # dest: '/var/www/html'
