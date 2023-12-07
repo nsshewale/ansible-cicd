@@ -2,7 +2,7 @@
 
 ---
 - name: Deploy React App on GCP VM
-  hosts: 34.100.224.118
+  hosts: instance-1
   gather_facts: false
   become: yes 
   tasks:
