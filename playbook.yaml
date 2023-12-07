@@ -7,8 +7,6 @@
   become: yes 
   tasks:
     - name: run a command
-      command: sudo apt update -y
-
-     # copy:
-      #  src: '/workspace/build'
-       # dest: '/var/www/html'
+      copy:
+        src: '/workspace/build'
+        dest: '/var/www/html'
