@@ -18,6 +18,8 @@ steps:
   - name: 'ansible/ubuntu14.04-ansible' 
    # entrypoint: 'bin/sh'
     args: 
+      - '-c'
+      - 'sudo apt-get install sshpass -y'
       - 'ansible-playbook'
       - '-i'
       - '/workspace/inventory.ini'
