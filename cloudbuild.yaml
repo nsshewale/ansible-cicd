@@ -5,14 +5,14 @@ options:
   dynamic_substitutions: true
 steps:
   # Step 1: Use an official Node.js image for installing dependencies
- # - name: 'node:14'
-  #  entrypoint: 'npm'
-   # args: ['install']
+  - name: 'node:14'
+    entrypoint: 'npm'
+    args: ['install']
 
   # Step 2: Use the same Node.js image for building the React app
-  #- name: 'node:14'
-  #  entrypoint: 'npm'
- #   args: ['run', 'build']
+  - name: 'node:14'
+    entrypoint: 'npm'
+    args: ['run', 'build']
  
    # Step 3: Run Ansible playbook to transfer build files to GCP VM
   - name: 'ansible/ubuntu14.04-ansible' 
