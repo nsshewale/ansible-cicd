@@ -6,7 +6,7 @@
   gather_facts: false
   become: yes 
   tasks:
-    - name: run a command
+    - name: deploy to server
       copy:
         src: '/workspace/build'
         dest: '/var/www/html'
