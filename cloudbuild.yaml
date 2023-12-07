@@ -20,10 +20,10 @@ steps:
     args: 
       - '-c'
       - |
-      - 'sudo apt-get install sshpass -y'
-      - 'ansible-playbook'
-      - '-i'
-      - '/workspace/inventory.ini'
-      - '/workspace/playbook.yaml'    
+      - sudo apt-get install sshpass -y
+      - ansible-playbook
+      - -i
+      - /workspace/inventory.ini
+      - /workspace/playbook.yaml    
 
       
