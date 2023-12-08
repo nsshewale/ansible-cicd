@@ -2,7 +2,7 @@
 
 ---
 - name: Exchange Keys between servers
-  hosts: 10.160.0.2
+  hosts: instance-1
   tasks:
     - name: SSH KeyGen command
       tags: run
