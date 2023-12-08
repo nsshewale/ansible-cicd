@@ -1,14 +1,11 @@
 # deploy.yml
 
 ---
-- name: Deploy React App on GCP VM
-  hosts: instance-1
-  gather_facts: yes
-  become: yes 
-  connection: ssh
+- name: Exchange Keys between servers
+  hosts: multi
   tasks:
-    - name: deploy to server
-      command: sudo apt update -y
-      #copy:
-       # src: '/workspace/build'
-       # dest: '/var/www/html'
+    - name: SSH KeyGen command
+      tags: run
+      shell: > 
+        ssh-keygen -q -b 2048 -t rsa -N "" -C "creating SSH" -f ~/.ssh/id_rsa
+        creates="~/.ssh/id_rsa"
