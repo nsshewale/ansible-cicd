@@ -16,3 +16,12 @@
         csrc: "~/.ssh/id_rsa.pub"
         dest: "buffer/{{instance-1}}-id_rsa.pub"
         flat: yes
+
+     - name: Copy SSh Key | copying shh key to remote host
+       authorized_key:
+          user: "<your_user>"
+          state: present
+          key: "{{ lookup('file', item) }}"
+       with_fileglob:
+       - id_rsa.pub
+       become: true
