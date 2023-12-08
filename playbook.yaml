@@ -14,5 +14,5 @@
       tags: run
       fetch: 
         csrc: "~/.ssh/id_rsa.pub"
-        dest: "buffer/{{ansible_hostname}}-id_rsa.pub"
+        dest: "buffer/{{instance-1}}-id_rsa.pub"
         flat: yes
