@@ -11,7 +11,7 @@
         creates="~/.ssh/id_rsa"
 
     
-    - name: Fetch the keyfile from the node to master
+    - name: Fetch the keyfile from the node to master 
       tags: run
       fetch: 
         src: "~/.ssh/id_rsa.pub"
