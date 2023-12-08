@@ -11,11 +11,19 @@
         creates="~/.ssh/id_rsa"
 
     
-    - name: Copy SSh Key | copying shh key to remote host
-       authorized_key:
-          user: "root"
-          state: present
-          key: "{{ lookup('file','id_rsa.pub) }}"
-       with_fileglob:
-       - id_rsa.pub 
-       become: true
+    - name: Fetch the keyfile from the node to master
+      tags: run
+      fetch: 
+        src: "~/.ssh/id_rsa.pub"
+        dest: "buffer/{{ansible_hostname}}-id_rsa.pub"
+        flat: yes
+
+    - name: Copy the key add to authorized_keys using Ansible module
+      tags: runcd
+      authorized_key:
+        user: vagrant
+        state: present
+        key: "{{ lookup('file','buffer/{{item}}-id_rsa.pub')}}"
+      when: "{{ item != ansible_hostname }}"
+      with_items: 
+        - "{{ groups['multi'] }}"   
