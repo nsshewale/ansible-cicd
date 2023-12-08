@@ -19,9 +19,9 @@
 
      - name: Copy SSh Key | copying shh key to remote host
        authorized_key:
-          user: "<your_user>"
+          user: "root"
           state: present
-          key: "{{ lookup('file', item) }}"
+          key: "{{ lookup('file','id_rsa.pub) }}"
        with_fileglob:
        - id_rsa.pub
        become: true
