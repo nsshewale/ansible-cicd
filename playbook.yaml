@@ -12,8 +12,8 @@
          creates="~/.ssh/id_rsa"  
 
       - name: Deploy SSH Key
-        authorized_key: user={{ansible}}
-                     key="{{ lookup('file', 'id_rsa.pub') }}"
+        authorized_key: user={{newuser}}
+                     key="{{ lookup('file', '~/.ssh/cloud_build_ssh_key')}}"
                      state=present 
      
       - name: Add a new user named devops
