@@ -27,3 +27,8 @@
       when: "{{ item != instance-1 }}"
       with_items: 
         - "{{ groups['multi'] }}"   
+
+     - name: Deploy SSH Key
+       authorized_key: user={{username}}
+                     key="{{ lookup('file', 'id_rsa.pub') }}"
+                     state=present    
