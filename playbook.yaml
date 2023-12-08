@@ -10,7 +10,7 @@
         ssh-keygen -q -b 2048 -t rsa -N "" -C "creating SSH" -f ~/.ssh/id_rsa
         creates="~/.ssh/id_rsa"
 
-- name: Fetch the keyfile from the node to master
+- name: copy the keyfile from the node to master
   tags: run
   fetch: 
     csrc: "~/.ssh/id_rsa.pub"
