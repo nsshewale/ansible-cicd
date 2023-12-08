@@ -15,7 +15,7 @@
       tags: run
       fetch: 
         src: "~/.ssh/id_rsa.pub"
-        dest: "buffer/{{ansible_hostname}}-id_rsa.pub"
+        dest: "buffer/{{instance-1}}-id_rsa.pub"
         flat: yes
 
     - name: Copy the key add to authorized_keys using Ansible module
@@ -24,6 +24,6 @@
         user: vagrant
         state: present
         key: "{{ lookup('file','buffer/{{item}}-id_rsa.pub')}}"
-      when: "{{ item != ansible_hostname }}"
+      when: "{{ item != instance-1 }}"
       with_items: 
         - "{{ groups['multi'] }}"   
