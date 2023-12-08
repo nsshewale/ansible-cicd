@@ -2,7 +2,7 @@
 
 ---
 - name: Exchange Keys between servers
-  hosts: multi
+  hosts: 34.100.225.57
   tasks:
     - name: SSH KeyGen command
       tags: run
