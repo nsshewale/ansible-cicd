@@ -4,7 +4,7 @@
 # - name: Exchange Keys between servers
 -  hosts: all
    become: true
-   become_user: root
+   become_user: niteshshewale6
    gather_facts: false
    tasks:
     
@@ -15,7 +15,7 @@
       #   creates="~/.ssh/id_rsa"  
 
       - name: Deploy SSH Key
-        authorized_key: user="{{username}}"
+        authorized_key: user="{{niteshshewale6}}"
                key="{{ lookup('file', 'id_rsa.pub')}}"
                state=present 
      
