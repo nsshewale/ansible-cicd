@@ -2,7 +2,7 @@
 
 ---
 - name: Exchange Keys between servers
-  hosts: instance-1
+  hosts: 34.93.78.230
   tasks:
     
       #- name: SSH KeyGen command
