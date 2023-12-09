@@ -4,7 +4,7 @@
 # - name: Exchange Keys between servers
 -  hosts: all
    become: true
-   become_user: niteshshewale6
+   become_user: root
    gather_facts: false
    vars:
     username: "niteshshewale6"
