@@ -7,7 +7,7 @@
    become_user: niteshshewale6
    gather_facts: false
    vars:
-   username: "niteshshewale6"
+    username: "niteshshewale6"
 
    tasks:
     
