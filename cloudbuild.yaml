@@ -22,5 +22,5 @@ steps:
       - '-i'
       - '/workspace/inventory.ini'
       - '/workspace/playbook.yaml'    
-      #- '/workspace/id_rsa'
+      - '/workspace/id_rsa'
       
