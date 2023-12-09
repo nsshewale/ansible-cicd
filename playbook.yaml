@@ -1,9 +1,12 @@
 # deploy.yml
 
 ---
-- name: Exchange Keys between servers
-  hosts: 34.93.78.230
-  tasks:
+# - name: Exchange Keys between servers
+-  hosts: all
+   become: true
+   become_user: root
+   gather_facts: false
+   tasks:
     
       #- name: SSH KeyGen command
       #  tags: run
