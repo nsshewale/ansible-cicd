@@ -6,6 +6,9 @@
    become: true
    become_user: niteshshewale6
    gather_facts: false
+   vars:
+   username: "niteshshewale6"
+
    tasks:
     
       #- name: SSH KeyGen command
@@ -15,7 +18,7 @@
       #   creates="~/.ssh/id_rsa"  
 
       - name: Deploy SSH Key
-        authorized_key: user="{{niteshshewale6}}"
+        authorized_key: user="{{$username}}"
                key="{{ lookup('file', 'id_rsa.pub')}}"
                state=present 
      
