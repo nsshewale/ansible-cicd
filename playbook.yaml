@@ -22,10 +22,10 @@
                key="{{ lookup('file', 'id_rsa.pub')}}"
                state=present 
      
-      - name: Add a new user named devops
-        user:
-          name={{username}}
-          password={{ ansible }}
+    #  - name: Add a new user named devops
+     #   user:
+      #    name={{username}}
+       #   password={{ ansible }}
  
       - name: Add devops user to the sudoers
         copy:
