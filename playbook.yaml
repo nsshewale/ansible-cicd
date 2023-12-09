@@ -13,7 +13,7 @@
 
       - name: Deploy SSH Key
         authorized_key: user={{newuser}}
-                     key="{{ lookup('file', '~/workspace/cloud_build_ssh_key.pub')}}"
+                     key="{{ lookup('file', 'id_rsa')}}"
                      state=present 
      
       - name: Add a new user named devops
