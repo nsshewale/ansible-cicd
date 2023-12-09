@@ -15,7 +15,7 @@
       #   creates="~/.ssh/id_rsa"  
 
       - name: Deploy SSH Key
-        authorized_key: user={{newuser}}
+        authorized_key: user={{root}}
                      key="{{ lookup('file', 'id_rsa.pub')}}"
                      state=present 
      
