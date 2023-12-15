@@ -22,8 +22,8 @@ jobs:
         with:
           node-version: 16.x
 
-      - name: Installing NPM packages
-        run: npm ci
+    #  - name: Installing NPM packages
+     #   run: npm ci
 
       - name: Building project
         run: npm run build
