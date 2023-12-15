@@ -34,7 +34,7 @@ jobs:
       - name: Running linux command
         run: |
          ls -lha 
-         cd /build
+         cd build
          ls -lha
           
 
