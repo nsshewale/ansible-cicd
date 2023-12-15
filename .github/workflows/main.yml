@@ -32,7 +32,11 @@ jobs:
         run: npm run test
 
       - name: Running linux command
-        run: ls -lha 
+        run: |
+         ls -lha 
+         cd /build
+         ls -lha
+          
 
       # - name: Configure AWS Credentials
       #   uses: aws-actions/configure-aws-credentials@v4
